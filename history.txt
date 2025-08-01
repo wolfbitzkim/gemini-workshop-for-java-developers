@@ -33,3 +33,8 @@ gradlew.bat run -q -DjavaMainClass=gemini.workshop.GeegleGenaiExample
 - 파일 추가 및 실행
 gradlew.bat run -q -DjavaMainClass=gemini.workshop.ClaudeRestExample
 gradlew.bat run -q -DjavaMainClass=gemini.workshop.ClaudeHaikuExample
+
+@ Llama example 추가
+- 파일 추가 및 실행
+gradlew.bat run -q -DjavaMainClass=gemini.workshop.LlamaStreamExample
+gradlew.bat run -q -DjavaMainClass=gemini.workshop.LlamaStreamText
