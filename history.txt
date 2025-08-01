@@ -1,11 +1,35 @@
-
+@ 초기 실행
 gradle wrapper
 
 gradlew.bat run
 
-// 환경변수 설정
+- 환경변수 설정
 set GOOGLE_APPLICATION_CREDENTIALS=C:\work\keyfile\pjt-dev-lgcaip-playground-664d4b624f92.json
 set PROJECT_ID=pjt-dev-lgcaip-playground
 set LOCATION=us-central1
 
 gradlew.bat run -q -DjavaMainClass=gemini.workshop.QA
+
+@ GeegleGenaiExample 추가
+- fix build.gradle
+dependencies {
+    implementation 'com.google.genai:google-genai:1.9.0'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+- add GeegleGenaiExample.java
+- 실행
+gradlew.bat run -q -DjavaMainClass=gemini.workshop.GeegleGenaiExample
+
+@ ClaudeRestExample, ClaudeHaikuExample 추가
+- build.gradle dependency 추가
+    implementation 'com.google.auth:google-auth-library-oauth2-http:1.19.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.12.0'
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+- 파일 추가 및 실행
+gradlew.bat run -q -DjavaMainClass=gemini.workshop.ClaudeRestExample
+gradlew.bat run -q -DjavaMainClass=gemini.workshop.ClaudeHaikuExample
