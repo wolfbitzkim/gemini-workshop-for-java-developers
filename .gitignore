@@ -3,6 +3,8 @@
 **/build/
 !src/**/build/
 app/bin
+gradle/
+gradlew*
 
 # Ignore Gradle GUI config
 gradle-app.setting
@@ -43,8 +45,3 @@ gradle-app.setting
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
-
-# ktj add
-gradle/wrapper
-gradlew
-gradlew.bat
