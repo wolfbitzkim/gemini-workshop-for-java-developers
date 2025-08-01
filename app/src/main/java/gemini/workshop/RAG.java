@@ -112,7 +112,8 @@ public class RAG {
         ).forEach(query -> {
             Result<String> response = expert.ask(query);
             System.out.printf("%n=== %s === %n%n %s %n%n", query, response.content());
-            System.out.println("SOURCE: " + response.sources().getFirst().textSegment().text());
+            // fix getFirst() to get(0) for jdk 21->17
+            System.out.println("SOURCE: " + response.sources().get(0).textSegment().text());
         });
     }
 }
